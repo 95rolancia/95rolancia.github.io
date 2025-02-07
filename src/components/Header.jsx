@@ -23,7 +23,7 @@ export default function Header() {
       {/* 애니메이션 적용된 nav (헤더 높이에 영향 안 주도록 absolute 적용) */}
       <nav
         className={`absolute top-full left-0 w-full bg-black text-center transition-all duration-300 ${
-          isOpen ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0 pointer-events-none"
+          isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
       >
         <ul className="py-4">
