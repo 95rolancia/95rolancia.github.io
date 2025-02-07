@@ -33,7 +33,7 @@ export default function IntroSection({ infos, openLyricsPopup }) {
       },
       {
         root: null,
-        rootMargin: "-10% 0px -88% 0px",
+        rootMargin: "-20% 0px -80% 0px",
         threshold: 0,
       }
     );
@@ -48,7 +48,7 @@ export default function IntroSection({ infos, openLyricsPopup }) {
     const targetRef = sectionsRef.current.find((el) => el.id === id);
 
     if (targetRef) {
-      const yOffset = -100;
+      const yOffset = -85;
       const y =
         targetRef.getBoundingClientRect().top + window.scrollY + yOffset;
 
