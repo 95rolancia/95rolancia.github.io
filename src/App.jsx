@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import { IoMdClose } from "react-icons/io";
 import IntroSection from "./components/IntroSection";
 import MainSection from "./components/MainSection";
+import NotiSection from "./components/NotiSection";
 
 const songs = [
   {
@@ -206,6 +207,7 @@ export default function App() {
     <div>
       <Header />
       <MainSection />
+      <NotiSection />
       <IntroSection infos={groupedSongs} openLyricsPopup={openLyricsPopup} />
 
       {[
