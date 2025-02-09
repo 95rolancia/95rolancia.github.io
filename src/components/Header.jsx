@@ -4,7 +4,7 @@ import { Turn as Hamburger } from "hamburger-react";
 // 네비게이션 항목 컴포넌트
 const NavItem = ({ href, children, onClick, isLast }) => (
   <li className={`text-2xl ${isLast ? "" : "mb-8"} font-bold hover:text-gray-400`} onClick={onClick}>
-    <a href={href}>{children}</a>
+    <a href={href} className="block w-full">{children}</a>
   </li>
 );
 
