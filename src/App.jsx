@@ -5,6 +5,35 @@ import IntroSection from "./components/IntroSection";
 import MainSection from "./components/MainSection";
 import NotiSection from "./components/NotiSection";
 
+import { FaArrowUp } from "react-icons/fa";
+
+// const thumbnails = [
+//   {
+//     teamname: '은록도 록이다',
+//     thumbnail: 'https://images.95jjangjun.workers.dev/IMG_9470.jpeg'
+//   },
+//   {
+//     teamname: '은록도 록이다',
+//     thumbnail: 'https://images.95jjangjun.workers.dev/IMG_9470.jpeg'
+//   },
+//   {
+//     teamname: '은록도 록이다',
+//     thumbnail: 'https://images.95jjangjun.workers.dev/IMG_9470.jpeg'
+//   },
+//   {
+//     teamname: '은록도 록이다',
+//     thumbnail: 'https://images.95jjangjun.workers.dev/IMG_9470.jpeg'
+//   },
+//   {
+//     teamname: '은록도 록이다',
+//     thumbnail: 'https://images.95jjangjun.workers.dev/IMG_9470.jpeg'
+//   },
+//   {
+//     teamname: '은록도 록이다',
+//     thumbnail: 'https://images.95jjangjun.workers.dev/IMG_9470.jpeg'
+//   },
+// ]
+
 const songs = [
   {
     artist: "윤도현밴드",
@@ -210,10 +239,23 @@ export default function App() {
       <NotiSection />
       <IntroSection infos={groupedSongs} openLyricsPopup={openLyricsPopup} />
 
+      <section className="text-center w-full h-[1000px] pt-20 px-10">
+        <h2 className="font-bold text-4xl mb-10">지켜주세요</h2>
+
+        <p>
+          2025 시간외 12분기 정기 공연이 즐거운 교류와 성장의 장이 될 수 있도록
+          꼭 지켜주세요
+        </p>
+
+        <ul>
+          <li>안전과 청결을 지켜주세요</li>
+        </ul>
+      </section>
+
       {[
-        { id: "promise", title: "지켜주세요" },
+        // { id: "promise", title: "지켜주세요" },
         { id: "faq", title: "자주 하는 질문" },
-        { id: "location", title: "여기서 만나요" },
+        // { id: "location", title: "여기서 만나요" },
       ].map((section) => (
         <section
           key={section.id}
@@ -223,6 +265,36 @@ export default function App() {
           <h2 className="font-bold text-4xl">{section.title}</h2>
         </section>
       ))}
+
+      <section id="location" className="text-center w-full pt-20 pb-20">
+        <h2 className="font-bold text-4xl pb-6">여기서 만나요</h2>
+
+        <div className="m-4">
+          <img
+            src="https://images.95jjangjun.workers.dev/IMG_9477.jpeg"
+            className="border-2 border-amber-100 rounded-md"
+            onClick={() => {
+              window.open("https://naver.me/xiquDF3a");
+            }}
+          ></img>
+        </div>
+
+        <p className="px-6 pt-3 font-bold break-words text-xl">
+          서울 마포구 와우산로17길 19-22 B1
+          <br />
+        </p>
+
+        <p className="font-bold text-gray-400">(상수역 1번 출구에서 290m)</p>
+      </section>
+
+      <div className="text-center pb-20">
+        <button
+          className="text-3xl border-2 rounded-full p-1 border-white"
+          onClick={() => window.scrollTo({ top: 0 })}
+        >
+          <FaArrowUp />
+        </button>
+      </div>
 
       {showLyricsPopup && (
         <LyricsPopup
