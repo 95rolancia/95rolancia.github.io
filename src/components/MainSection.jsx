@@ -26,7 +26,7 @@ export default function MainSection() {
     <div className="flex h-screen justify-center items-center">
       <img
         ref={imgRef}
-        src={poster}
+        src="https://images.95jjangjun.workers.dev/IMG_9468.jpeg"
         alt="overtime poster"
         style={{ opacity }}
       />
