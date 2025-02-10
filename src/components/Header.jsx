@@ -1,10 +1,20 @@
 import { useState } from "react";
 import { Turn as Hamburger } from "hamburger-react";
 
+// 네비게이션 항목 리스트
+const navItems = [
+  { href: "#intro", label: "세션 소개" },
+  { href: "#promise", label: "지켜주세요" },
+  { href: "#faq", label: "자주 하는 질문" },
+  { href: "#location", label: "여기서 만나요" },
+];
+
 // 네비게이션 항목 컴포넌트
-const NavItem = ({ href, children, onClick, isLast }) => (
-  <li className={`text-2xl ${isLast ? "" : "mb-8"} font-bold hover:text-gray-400`} onClick={onClick}>
-    <a href={href} className="block w-full">{children}</a>
+const NavItem = ({ href, children, onClick }) => (
+  <li className="text-2xl mb-8 last:mb-0 font-bold hover:text-gray-400">
+    <a href={href} className="block w-full" onClick={onClick}>
+      {children}
+    </a>
   </li>
 );
 
@@ -20,25 +30,18 @@ export default function Header() {
         <Hamburger toggled={isOpen} toggle={setOpen} size={20} />
       </div>
 
-      {/* 애니메이션 적용된 nav (헤더 높이에 영향 안 주도록 absolute 적용) */}
+      {/* 애니메이션 적용된 nav */}
       <nav
         className={`absolute top-full left-0 w-full bg-black text-center transition-all duration-300 ${
           isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
       >
         <ul className="py-4">
-          <NavItem href="#intro" onClick={() => setOpen(false)}>
-            세션 소개
-          </NavItem>
-          <NavItem href="#promise" onClick={() => setOpen(false)}>
-            지켜주세요
-          </NavItem>
-          <NavItem href="#faq" onClick={() => setOpen(false)}>
-            자주 하는 질문
-          </NavItem>
-          <NavItem href="#location" onClick={() => setOpen(false)} isLast>
-            여기서 만나요
-          </NavItem>
+          {navItems.map(({ href, label }) => (
+            <NavItem key={href} href={href} onClick={() => setOpen(false)}>
+              {label}
+            </NavItem>
+          ))}
         </ul>
       </nav>
     </header>
