@@ -45,6 +45,41 @@ const songs = [
     participants: [
       "허은재(보컬), 서예찬(기타), 노윤정(키보드), 송인욱(베이스), 드럼(김재동)",
     ],
+    lyrics:`
+    Kiss me, out of the bearded barley
+    Nightly, beside the green, green grass
+    Swing, swing, swing the spinning step
+    You'll wear those shoes and I will wear that dress
+
+    Oh, kiss me, beneath the milky twilight
+    Lead me out on the moonlit floor
+    Lift your open hand
+    Strike up the band and make the fireflies dance
+    Silver moon's sparkling
+    So kiss me
+
+    Kiss me, down by the broken tree house
+    Swing me, upon its hanging tire
+    Bring, bring, bring your flowered hat
+    We'll take the trail marked on your father's map
+
+    Oh, kiss me, beneath the milky twilight
+    Lead me out on the moonlit floor
+    Lift your open hand
+    Strike up the band and make the fireflies dance
+    Silver moon's sparkling    
+    So kiss me
+
+    Kiss me, beneath the milky twilight
+    Lead me out on the moonlit floor
+    Lift your open hand
+    Strike up the band and make the fireflies dance
+    Silver moon's sparkling
+    So kiss me
+
+    So kiss me
+    So kiss me
+    So kiss me`
   },
   {
     artist: "윤도현밴드",
@@ -53,7 +88,8 @@ const songs = [
     participants: [
       "양재혁(보컬), 장준혁&김수연(기타), 노윤정(키보드), 송인욱(베이스), 김재동(드럼)",
     ],
-    lyrics: `아침에 눈을 떴을 때 너를 
+    lyrics: `
+    아침에 눈을 떴을 때 너를 
     길을 걷다 멍하니 너를 
     지금은 내 곁에 없는 너를 
     그리워하네 바보처럼 
@@ -102,6 +138,65 @@ const songs = [
     title: "Litume",
     teamname: "비상장밴드",
     participants: ["양재혁(보컬), 장준혁(기타), 허은재(베이스), 드럼(김재동)"],
+    lyrics: `
+    I'm so happy 'cause today I found my friends
+    They're in my head
+    I'm so ugly, that's okay, 'cause so are you
+    Broke our mirrors
+    Sunday morning is everyday, for all I care
+    And I'm not scared
+    Light my candles in a daze
+    'Cause I've found God
+    Yeah, yeah
+    Yeah, yeah
+    Yeah, yeah
+    Yeah, yeah
+    Yeah, yeah
+    Yeah, yeah, yeah
+    I'm so lonely, that's okay, I shaved my head
+    And I'm not sad
+    And just maybe I'm to blame for all I've heard
+    But I'm not sure
+    I'm so excited, I can't wait to meet you there
+    And I don't care
+    I'm so horny, that's okay
+    My will is good
+    Yeah, yeah
+    Yeah, yeah
+    Yeah, yeah
+    Yeah, yeah
+    Yeah, yeah
+    Yeah, yeah, yeah
+    I like it, I'm not gonna crack
+    I miss you, I'm not gonna crack
+    I love you, I'm not gonna crack
+    I killed you, I'm not gonna crack
+    I like it, I'm not gonna crack
+    I miss you, I'm not gonna crack
+    I love you, I'm not gonna crack
+    I killed you, I'm not gonna crack
+    I'm so happy 'cause today I found my friends
+    They're in my head
+    I'm so ugly, that's okay, 'cause so are you
+    Broke our mirrors
+    Sunday morning is everyday, for all I care
+    And I'm not scared
+    Light my candles in a daze
+    'Cause I've found God
+    Yeah, yeah
+    Yeah, yeah
+    Yeah, yeah
+    Yeah, yeah
+    Yeah, yeah
+    Yeah, yeah, yeah
+    I like it, I'm not gonna crack
+    I miss you, I'm not gonna crack
+    I love you, I'm not gonna crack
+    I killed you, I'm not gonna crack
+    I like it, I'm not gonna crack
+    I miss you, I'm not gonna crack
+    I love you, I'm not gonna crack
+    I killed you, I'm not gonna crack`
   },
   {
     artist: "Green day",
@@ -228,21 +323,27 @@ const songs = [
     artist: "델리스파이스",
     title: "고백",
     teamname: "은록도 록이다",
-    participants: ["이은상(보컬), 최재혁(기타), 김송현(키보드), 이지연(베이스), 드럼(김민지)"],
+    participants: [
+      "이은상(보컬), 최재혁(기타), 김송현(키보드), 이지연(베이스), 드럼(김민지)",
+    ],
   },
 
   {
     artist: "체리필터",
     title: "Happy day",
     teamname: "은록도 록이다",
-    participants: ["진소희(보컬), 최재혁(기타), 석은록(키보드), 이지연(베이스), 드럼(김민지)"],
+    participants: [
+      "진소희(보컬), 최재혁(기타), 석은록(키보드), 이지연(베이스), 드럼(김민지)",
+    ],
   },
 
   {
     artist: "터치드",
     title: "Highlight",
     teamname: "은록도 록이다",
-    participants: ["진소희(보컬), 최재혁(기타), 석은록(키보드), 이지연(베이스), 드럼(김민지)"],
+    participants: [
+      "진소희(보컬), 최재혁(기타), 석은록(키보드), 이지연(베이스), 드럼(김민지)",
+    ],
   },
 ];
 
@@ -350,10 +451,12 @@ export default function App() {
 }
 
 const LyricsPopup = ({ lyrics, onClose }) => (
-  <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 overflow-scroll">
+  <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
     <button className="text-3xl fixed right-4 top-4" onClick={onClose}>
       <IoMdClose />
     </button>
-    <pre>{lyrics || "가사 없음"}</pre>
+    <div className="my-20 max-h-[80vh] overflow-y-auto max-w-screen">
+      <pre className="text-sm">{lyrics || "가사 없음"}</pre>
+    </div>
   </div>
 );

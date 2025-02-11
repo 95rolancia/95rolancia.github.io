@@ -17,4 +17,11 @@
 
 body {
   background-color: black;
+  display: flex;
+  justify-content: center;
+}
+
+#root {
+  width: 100vw;
+  max-width: 600px;
 }
