@@ -1,7 +1,7 @@
 import { useState, useCallback, useRef, useEffect } from "react";
 import arrow from "../assets/arrow.svg";
 
-export default function IntroSection({ infos, openLyricsPopup }) {
+export default function IntroSection({ id, infos, openLyricsPopup }) {
   const [isSessionFilterOpen, setIsSessionFilterOpen] = useState(false);
   const [activeTitle, setActiveTitle] = useState("");
 
@@ -57,10 +57,10 @@ export default function IntroSection({ infos, openLyricsPopup }) {
   }, []);
 
   return (
-    <section id="intro" className="text-center w-full mt-10 pt-20">
+    <section id={id} className="text-center w-full mt-10 pt-20">
       <h2 className="font-bold text-4xl mb-10">세션 소개</h2>
 
-      <div className="border-t-gray-700 border-t-2 bg-black sticky top-[55px]">
+      <div className="border-t-gray-700 border-t-1 bg-black sticky top-[56px]">
         <div
           className="flex justify-between p-4 pl-5 border-b-gray-500 border-b-1 cursor-pointer"
           onClick={toggleSessionFilter}

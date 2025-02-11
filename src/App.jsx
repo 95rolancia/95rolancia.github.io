@@ -1,11 +1,14 @@
 import { useState, useMemo, useEffect } from "react";
+
 import Header from "./components/Header";
-import { IoMdClose } from "react-icons/io";
 import IntroSection from "./components/IntroSection";
 import MainSection from "./components/MainSection";
 import NotiSection from "./components/NotiSection";
+import Schedule from "./components/Schedule";
+import ArrowUpBtn from "./components/ArrowUpBtn";
+import LocationSection from "./components/LocationSection";
 
-import { FaArrowUp } from "react-icons/fa";
+import { IoMdClose } from "react-icons/io";
 
 // const thumbnails = [
 //   {
@@ -36,11 +39,19 @@ import { FaArrowUp } from "react-icons/fa";
 
 const songs = [
   {
+    artist: "Sixpence none the richer",
+    title: "Kiss me",
+    teamname: "비상장밴드",
+    participants: [
+      "허은재(보컬), 서예찬(기타), 노윤정(키보드), 송인욱(베이스), 드럼(김재동)",
+    ],
+  },
+  {
     artist: "윤도현밴드",
     title: "잊을게",
     teamname: "비상장밴드",
     participants: [
-      "양재혁(보컬), 장준혁(기타), 김수연(기타), 송인욱(베이스), 김재동(드럼)",
+      "양재혁(보컬), 장준혁&김수연(기타), 노윤정(키보드), 송인욱(베이스), 김재동(드럼)",
     ],
     lyrics: `아침에 눈을 떴을 때 너를 
     길을 걷다 멍하니 너를 
@@ -93,16 +104,24 @@ const songs = [
     participants: ["양재혁(보컬), 장준혁(기타), 허은재(베이스), 드럼(김재동)"],
   },
   {
-    artist: "Sixpence none the richer",
-    title: "Kiss me",
-    teamname: "비상장밴드",
-    participants: ["허은재(보컬), 송인욱(베이스), 서예찬(기타), 드럼(김재동)"],
-  },
-  {
     artist: "Green day",
     title: "Basket Case",
     teamname: "비상장밴드",
     participants: ["양재혁(보컬), 김수연(기타), 허은재(베이스), 드럼(송인욱)"],
+  },
+  {
+    artist: "이적",
+    title: "빨래",
+    teamname: "운영본부",
+    participants: [
+      "김준호(보컬), 원다연(키보드), 허은재(베이스), 이규민(드럼)",
+    ],
+  },
+  {
+    artist: "원모어찬스",
+    title: "널 생각해",
+    teamname: "운영본부",
+    participants: ["조용걸(보컬), 김세영(기타), 원다연(키보드), 드럼(이규민)"],
   },
 
   {
@@ -113,94 +132,143 @@ const songs = [
   },
 
   {
-    artist: "원모어찬스",
-    title: "널 생각해",
-    teamname: "운영본부",
-    participants: ["조용걸(보컬), 원다연(키보드)"],
-  },
-
-  {
-    artist: "이적",
-    title: "빨래",
-    teamname: "운영본부",
-    participants: ["김준호(보컬), 원다연(키보드)"],
-  },
-
-  {
     artist: "Radiohead",
     title: "Creep",
     teamname: "운영본부",
-    participants: ["이은상(보컬), 서예찬(기타), 김세영(회장), 원다연(키보드)"],
+    participants: [
+      "이은상(보컬), 서예찬&김세영(기타), 원다연(키보드), 허은재(베이스)",
+    ],
+  },
+  {
+    artist: "윤하",
+    title: "비밀번호 486",
+    teamname: "시간외 파도타기",
+    participants: [
+      "이희주(보컬), 서예찬&김세영(기타), 김은지(키보드), 권혁민(베이스), 김형욱(드럼)",
+    ],
+  },
+  {
+    artist: "러브홀릭",
+    title: "그대만 있다면",
+    teamname: "시간외 파도타기",
+    participants: [
+      "이희주(보컬), 서예찬&김세영(기타), 김은지(키보드), 원다연(키보드), 권혁민(베이스), 김형욱(드럼)",
+    ],
+  },
+  {
+    artist: "아이유",
+    title: "있잖아",
+    teamname: "시간외 파도타기",
+    participants: [
+      "이희주(보컬), 서예찬&김세영(기타), 원다연(키보드), 권혁민(베이스), 김형욱(드럼)",
+    ],
   },
 
   {
     artist: "서영은",
     title: "혼자가 아닌 나",
     teamname: "시간외 파도타기",
-    participants: ["이은상(보컬), 서예찬(기타), 김세영(회장), 원다연(키보드)"],
+    participants: [
+      "이희주(보컬), 원성호&김세영(기타), 원다연(키보드), 권혁민(베이스), 김형욱(드럼)",
+    ],
   },
-
-  {
-    artist: "윤하",
-    title: "비밀번호 486",
-    teamname: "시간외 파도타기",
-    participants: ["이은상(보컬), 서예찬(기타), 김세영(회장), 원다연(키보드)"],
-  },
-
-  {
-    artist: "러브홀릭",
-    title: "그대만 있다면",
-    teamname: "시간외 파도타기",
-    participants: ["이은상(보컬), 서예찬(기타), 김세영(회장), 원다연(키보드)"],
-  },
-
-  {
-    artist: "아이유",
-    title: "있잖아",
-    teamname: "시간외 파도타기",
-    participants: ["이은상(보컬), 서예찬(기타), 김세영(회장), 원다연(키보드)"],
-  },
-
+  // 2부
   {
     artist: "숀",
     title: "Way back home",
     teamname: "시간외안가",
-    participants: ["이은상(보컬), 서예찬(기타), 김세영(회장), 원다연(키보드)"],
+    participants: [
+      "조용걸(보컬), 이명근&이지은(기타), 윤혜정(키보드), 김남석(베이스), 김준호(드럼)",
+    ],
   },
 
   {
     artist: "주시크",
     title: "너를 생각해",
     teamname: "시간외안가",
-    participants: ["이은상(보컬), 서예찬(기타), 김세영(회장), 원다연(키보드)"],
+    participants: [
+      "조용걸(보컬), 이명근&이지은(기타), 윤혜정(키보드), 김남석(베이스), 최윤정(드럼)",
+    ],
   },
 
   {
     artist: "(여자)아이들",
     title: "나는 아픈건 딱 질색이니까",
     teamname: "시간외안가",
-    participants: ["윤소정(보컬), (기타), 김세영(회장), 원다연(키보드)"],
+    participants: [
+      "윤소정(보컬), 이명근&이지은(기타), 윤혜정(키보드), 김남석(베이스), 최윤정(드럼)",
+    ],
   },
 
+  {
+    artist: "OK Punk",
+    title: "ugly",
+    teamname: "uniT",
+    participants: [
+      "허은재(보컬), 최재혁&이명근(기타), 석은록(키보드), 송인욱(베이스), 김형욱(드럼)",
+    ],
+  },
+
+  {
+    artist: "Journey",
+    title: "Separate Ways",
+    teamname: "uniT",
+    participants: [
+      "이은상(보컬), 최재혁(기타), 석은록(키보드), 송인욱(베이스), 김형욱(드럼)",
+    ],
+  },
   {
     artist: "Same Direction",
     title: "Hoobastank",
     teamname: "은록도 록이다",
-    participants: ["이은상(보컬)", "..."],
+    participants: ["이은상(보컬), 최재혁(기타), 이지연(베이스), 드럼(김민지)"],
+  },
+
+  {
+    artist: "델리스파이스",
+    title: "고백",
+    teamname: "은록도 록이다",
+    participants: ["이은상(보컬), 최재혁(기타), 김송현(키보드), 이지연(베이스), 드럼(김민지)"],
   },
 
   {
     artist: "체리필터",
     title: "Happy day",
     teamname: "은록도 록이다",
-    participants: ["진소희(보컬)", "..."],
+    participants: ["진소희(보컬), 최재혁(기타), 석은록(키보드), 이지연(베이스), 드럼(김민지)"],
   },
 
   {
     artist: "터치드",
     title: "Highlight",
     teamname: "은록도 록이다",
-    participants: ["진소희(보컬)", "..."],
+    participants: ["진소희(보컬), 최재혁(기타), 석은록(키보드), 이지연(베이스), 드럼(김민지)"],
+  },
+];
+
+const NOTI_INFOS = {
+  title: "지켜주세요",
+  notis: ["안전을 유의해주세요", "뚜겅이 있는 음료만 반입이 가능합니다."],
+};
+
+const SECTION_META_DATA = [
+  {
+    id: "intro",
+    title: "세션 소개",
+    order: 1,
+    component: <IntroSection />,
+  },
+  {
+    id: "noti",
+    title: "지켜주세요",
+    order: 2,
+    component: <NotiSection />,
+  },
+  {
+    id: "location",
+    title: "여기서 만나요",
+    order: 3,
+    component: <LocationSection />,
   },
 ];
 
@@ -232,69 +300,44 @@ export default function App() {
     };
   }, [showLyricsPopup]);
 
+  useEffect(() => {
+    // hashchange 이벤트 리스너 등록
+    const handleHashChange = () => {
+      const targetElement = document.querySelector(window.location.hash);
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: "smooth" });
+      }
+    };
+
+    window.addEventListener("hashchange", handleHashChange);
+
+    // 처음 로딩 시에도 해시가 있으면 바로 스크롤
+    if (window.location.hash) {
+      handleHashChange();
+    }
+
+    return () => {
+      window.removeEventListener("hashchange", handleHashChange);
+    };
+  }, []);
+
   return (
-    <div>
-      <Header />
+    <>
+      <Header infos={SECTION_META_DATA} />
       <MainSection />
-      <NotiSection />
-      <IntroSection infos={groupedSongs} openLyricsPopup={openLyricsPopup} />
-
-      <section className="text-center w-full h-[1000px] pt-20 px-10">
-        <h2 className="font-bold text-4xl mb-10">지켜주세요</h2>
-
-        <p>
-          2025 시간외 12분기 정기 공연이 즐거운 교류와 성장의 장이 될 수 있도록
-          꼭 지켜주세요
-        </p>
-
-        <ul>
-          <li>안전과 청결을 지켜주세요</li>
-        </ul>
-      </section>
-
-      {[
-        // { id: "promise", title: "지켜주세요" },
-        { id: "faq", title: "자주 하는 질문" },
-        // { id: "location", title: "여기서 만나요" },
-      ].map((section) => (
-        <section
-          key={section.id}
-          id={section.id}
-          className="text-center w-full h-[1000px] pt-20"
-        >
-          <h2 className="font-bold text-4xl">{section.title}</h2>
-        </section>
-      ))}
-
-      <section id="location" className="text-center w-full pt-20 pb-20">
-        <h2 className="font-bold text-4xl pb-6">여기서 만나요</h2>
-
-        <div className="m-4">
-          <img
-            src="https://images.95jjangjun.workers.dev/IMG_9477.jpeg"
-            className="border-2 border-amber-100 rounded-md"
-            onClick={() => {
-              window.open("https://naver.me/xiquDF3a");
-            }}
-          ></img>
-        </div>
-
-        <p className="px-6 pt-3 font-bold break-words text-xl">
-          서울 마포구 와우산로17길 19-22 B1
-          <br />
-        </p>
-
-        <p className="font-bold text-gray-400">(상수역 1번 출구에서 290m)</p>
-      </section>
-
-      <div className="text-center pb-20">
-        <button
-          className="text-3xl border-2 rounded-full p-1 border-white"
-          onClick={() => window.scrollTo({ top: 0 })}
-        >
-          <FaArrowUp />
-        </button>
-      </div>
+      <Schedule />
+      <IntroSection
+        id="intro"
+        infos={groupedSongs}
+        openLyricsPopup={openLyricsPopup}
+      />
+      <LocationSection id="location" />
+      <NotiSection
+        id="noti"
+        title={NOTI_INFOS.title}
+        notis={NOTI_INFOS.notis}
+      />
+      <ArrowUpBtn />
 
       {showLyricsPopup && (
         <LyricsPopup
@@ -302,7 +345,7 @@ export default function App() {
           onClose={() => setShowLyricsPopup(false)}
         />
       )}
-    </div>
+    </>
   );
 }
 
