@@ -43,7 +43,7 @@ const songs = [
     title: "Kiss me",
     teamname: "비상장밴드",
     participants: [
-      "허은재(보컬), 서예찬(기타), 노윤정(키보드), 송인욱(베이스), 드럼(김재동)",
+      "허은재(보컬), 서예찬(기타), 노윤정(키보드), 송인욱(베이스), 김재동(드럼)",
     ],
     lyrics:`
     Kiss me, out of the bearded barley
@@ -137,7 +137,7 @@ const songs = [
     artist: "Nirvana",
     title: "Litume",
     teamname: "비상장밴드",
-    participants: ["양재혁(보컬), 장준혁(기타), 허은재(베이스), 드럼(김재동)"],
+    participants: ["양재혁(보컬), 장준혁(기타), 허은재(베이스), 김재동(드럼)"],
     lyrics: `
     I'm so happy 'cause today I found my friends
     They're in my head
@@ -202,7 +202,7 @@ const songs = [
     artist: "Green day",
     title: "Basket Case",
     teamname: "비상장밴드",
-    participants: ["양재혁(보컬), 김수연(기타), 허은재(베이스), 드럼(송인욱)"],
+    participants: ["양재혁(보컬), 김수연(기타), 허은재(베이스), 송인욱(드럼)"],
   },
   {
     artist: "이적",
@@ -216,7 +216,7 @@ const songs = [
     artist: "원모어찬스",
     title: "널 생각해",
     teamname: "운영본부",
-    participants: ["조용걸(보컬), 김세영(기타), 원다연(키보드), 드럼(이규민)"],
+    participants: ["조용걸(보컬), 김세영(기타), 원다연(키보드), 이규민(드럼)"],
   },
 
   {
@@ -316,7 +316,7 @@ const songs = [
     artist: "Same Direction",
     title: "Hoobastank",
     teamname: "은록도 록이다",
-    participants: ["이은상(보컬), 최재혁(기타), 이지연(베이스), 드럼(김민지)"],
+    participants: ["이은상(보컬), 최재혁(기타), 이지연(베이스), 김민지(드럼)"],
   },
 
   {
@@ -324,7 +324,7 @@ const songs = [
     title: "고백",
     teamname: "은록도 록이다",
     participants: [
-      "이은상(보컬), 최재혁(기타), 김송현(키보드), 이지연(베이스), 드럼(김민지)",
+      "이은상(보컬), 최재혁(기타), 김송현(키보드), 이지연(베이스), 김민지(드럼)",
     ],
   },
 
@@ -333,7 +333,7 @@ const songs = [
     title: "Happy day",
     teamname: "은록도 록이다",
     participants: [
-      "진소희(보컬), 최재혁(기타), 석은록(키보드), 이지연(베이스), 드럼(김민지)",
+      "진소희(보컬), 최재혁(기타), 석은록(키보드), 이지연(베이스), 김민지(드럼)",
     ],
   },
 
@@ -342,14 +342,14 @@ const songs = [
     title: "Highlight",
     teamname: "은록도 록이다",
     participants: [
-      "진소희(보컬), 최재혁(기타), 석은록(키보드), 이지연(베이스), 드럼(김민지)",
+      "진소희(보컬), 최재혁(기타), 석은록(키보드), 이지연(베이스), 김민지(드럼)",
     ],
   },
 ];
 
 const NOTI_INFOS = {
   title: "지켜주세요",
-  notis: ["안전을 유의해주세요", "뚜겅이 있는 음료만 반입이 가능합니다."],
+  notis: ["안전에 유의해주세요", "뚜껑이 있는 음료만 반입이 가능합니다."],
 };
 
 const SECTION_META_DATA = [
