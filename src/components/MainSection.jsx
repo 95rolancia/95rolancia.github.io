@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import poster from "../assets/poster.jpeg";
 
-export default function MainSection() {
+export default function MainSection({imgUrl}) {
   const imgRef = useRef(null);
   const [opacity, setOpacity] = useState(1);
 
@@ -23,13 +23,13 @@ export default function MainSection() {
   }, []);
 
   return (
-    <div className="flex h-screen justify-center items-center">
-      <img
-        ref={imgRef}
-        src="https://images.95jjangjun.workers.dev/IMG_9468.jpeg"
-        alt="overtime poster"
-        style={{ opacity }}
-      />
-    </div>
+      <div className="flex h-screen justify-center items-center">
+        <img
+          ref={imgRef}
+          src={imgUrl}
+          alt="overtime poster"
+          style={{ opacity }}
+        />
+      </div>
   );
 }

@@ -39,13 +39,13 @@ import { IoMdClose } from "react-icons/io";
 
 const songs = [
   {
-    artist: "Sixpence none the richer",
+    artist: "Sixpence None The Richer",
     title: "Kiss me",
     teamname: "비상장밴드",
     participants: [
       "허은재(보컬), 서예찬(기타), 노윤정(키보드), 송인욱(베이스), 김재동(드럼)",
     ],
-    lyrics:`
+    lyrics: `
     Kiss me, out of the bearded barley
     Nightly, beside the green, green grass
     Swing, swing, swing the spinning step
@@ -79,7 +79,7 @@ const songs = [
 
     So kiss me
     So kiss me
-    So kiss me`
+    So kiss me`,
   },
   {
     artist: "윤도현밴드",
@@ -135,7 +135,7 @@ const songs = [
   },
   {
     artist: "Nirvana",
-    title: "Litume",
+    title: "Lithium",
     teamname: "비상장밴드",
     participants: ["양재혁(보컬), 장준혁(기타), 허은재(베이스), 김재동(드럼)"],
     lyrics: `
@@ -196,7 +196,7 @@ const songs = [
     I like it, I'm not gonna crack
     I miss you, I'm not gonna crack
     I love you, I'm not gonna crack
-    I killed you, I'm not gonna crack`
+    I killed you, I'm not gonna crack`,
   },
   {
     artist: "Green day",
@@ -237,7 +237,7 @@ const songs = [
     I think I'm cracking up
     Am I just paranoid?
     Or am I just stoned?
-    `
+    `,
   },
   {
     artist: "이적",
@@ -246,7 +246,7 @@ const songs = [
     participants: [
       "김준호(보컬), 원다연(키보드), 허은재(베이스), 이규민(드럼)",
     ],
-    lyrics:`
+    lyrics: `
     빨래를 해야겠어요
     오후엔 비가 올까요
     그래도 상관은 없어요
@@ -281,7 +281,7 @@ const songs = [
     어떻게 해야만 할까요
     빨래를 해야겠어요
     오후엔 비가 올까요
-    `
+    `,
   },
   {
     artist: "원모어찬스",
@@ -321,7 +321,7 @@ const songs = [
     이른 아침 잠에서 깨어나
     이 세상에서 가장 행복한 너를
     내 앞에 웃는 그런 널 보며 I Love You
-    `
+    `,
   },
 
   {
@@ -329,7 +329,7 @@ const songs = [
     title: "I'm in Love",
     teamname: "운영본부",
     participants: ["조용걸(보컬), 원다연(키보드)"],
-    lyrics:`
+    lyrics: `
     사실은 첨봤을때부터 그댈 좋아했다고
     말하기가 내겐 참 어려웠던거죠
     먼저 다가서지 않으면 그댈 놓칠까봐
@@ -368,7 +368,7 @@ const songs = [
     그대는 너무 아름답죠
     
     그대는 너무 아름답죠
-    `
+    `,
   },
 
   {
@@ -378,7 +378,7 @@ const songs = [
     participants: [
       "이은상(보컬), 서예찬&김세영(기타), 원다연(키보드), 허은재(베이스)",
     ],
-    lyrics:`
+    lyrics: `
     When you were here before
     Couldn't look you in the eye
     You're just like an angel
@@ -421,7 +421,7 @@ const songs = [
 
     I don't belong here
     I don't belong here
-    `
+    `,
   },
   {
     artist: "윤하",
@@ -430,7 +430,7 @@ const songs = [
     participants: [
       "이희주(보컬), 서예찬&김세영(기타), 김은지(키보드), 권혁민(베이스), 김형욱(드럼)",
     ],
-    lyrics:`
+    lyrics: `
     한 시간마다 보고 싶다고 감정 없이 말하지 말아
     흔하게 널린 연애 지식은 통하지 않아
     백 번을 넘게 사랑한다고 감동 없이 말하지 말아
@@ -468,7 +468,7 @@ const songs = [
     날 열어주는 단 하나뿐인 비밀번호야
     누구도 알 수 없게 너만이 나를 가질 수 있도록
     You are my secret boy boy boy, boy boy boy
-    `
+    `,
   },
   {
     artist: "러브홀릭",
@@ -477,7 +477,7 @@ const songs = [
     participants: [
       "이희주(보컬), 서예찬&김세영(기타), 김은지(키보드), 원다연(키보드), 권혁민(베이스), 김형욱(드럼)",
     ],
-    lyrics:`
+    lyrics: `
     날 사랑해서 떠난다며
     눈물짓던 그대의 말을 믿을 수 없죠
     하지만 나의 전부였던
@@ -516,7 +516,7 @@ const songs = [
     나를 떠나지 말아요
     세상의 모든 걸 잃어도 난 좋아요
     그대만 있다면 그대만 있다면
-    `
+    `,
   },
   {
     artist: "아이유",
@@ -525,7 +525,7 @@ const songs = [
     participants: [
       "이희주(보컬), 서예찬&김세영(기타), 원다연(키보드), 권혁민(베이스), 김형욱(드럼)",
     ],
-    lyrics:`
+    lyrics: `
     One two three go
 
     있잖아 왠지 두근 두근 가슴이 떨려 몰라
@@ -563,7 +563,7 @@ const songs = [
     
     부드러운 내 입술이 네 볼에 닿을 때
     나만 사랑한단 말만 속삭여 줘 Darling
-    `
+    `,
   },
 
   {
@@ -571,9 +571,9 @@ const songs = [
     title: "혼자가 아닌 나",
     teamname: "시간외 파도타기",
     participants: [
-      "이희주(보컬), 원성호&김세영(기타), 원다연(키보드), 권혁민(베이스), 김형욱(드럼)",
+      "이희주(보컬), 원성호&김세영(기타), 원다연(키보드), 권혁민(베이스), 이규민(드럼)",
     ],
-    lyrics:`
+    lyrics: `
     이제 다시 울지 않겠어 더는 슬퍼하지 않아
     다신 외로움에 슬픔에 난 흔들리지 않겠어
     더는 약해지지 않을께 많이 아파도 웃을꺼야
@@ -597,7 +597,7 @@ const songs = [
     
     앞만 보고 걸어갈께 때론 혼자서 뛰어라도 갈께.
     내게 멈추던 조그만 슬픔도 날 따라오지 않게
-    `
+    `,
   },
   // 2부
   {
@@ -607,7 +607,7 @@ const songs = [
     participants: [
       "조용걸(보컬), 이명근&이지은(기타), 윤혜정(키보드), 김남석(베이스), 김준호(드럼)",
     ],
-    lyrics:`
+    lyrics: `
     멈춘 시간 속
     잠든 너를 찾아가
     아무리 막아도
@@ -675,7 +675,7 @@ const songs = [
     돌아와 내 곁에
     그날까지
     I'm not done
-    `
+    `,
   },
 
   {
@@ -685,7 +685,7 @@ const songs = [
     participants: [
       "조용걸(보컬), 이명근&이지은(기타), 윤혜정(키보드), 김남석(베이스), 최윤정(드럼)",
     ],
-    lyrics:`
+    lyrics: `
     너를 들려주고 싶었어
     이 노랠 만들 때
     아마 니가 정말 많이 좋아할꺼야
@@ -730,7 +730,7 @@ const songs = [
     이젠 내가 많이 잘할게
     너 혼자 울지마
     혹시 듣게 되면 아직 너뿐이라고
-    `
+    `,
   },
 
   {
@@ -740,7 +740,7 @@ const songs = [
     participants: [
       "윤소정(보컬), 이명근&이지은(기타), 윤혜정(키보드), 김남석(베이스), 최윤정(드럼)",
     ],
-    lyrics:`
+    lyrics: `
     오늘도 아침엔 입에 빵을 물고
     똑같이 하루를 시작하고
     온종일 한 손엔 아이스 아메리카노
@@ -788,16 +788,16 @@ const songs = [
     
     아냐 지나치는 게 나을 것 같아
     나는 아픈 건 딱 질색이니까
-    `
+    `,
   },
   {
-    artist: "OK Punk",
-    title: "ugly",
+    artist: "OK PUNK!",
+    title: "Ugly",
     teamname: "uniT",
     participants: [
       "허은재(보컬), 최재혁&이명근(기타), 석은록(키보드), 송인욱(베이스), 김형욱(드럼)",
     ],
-    lyrics:`
+    lyrics: `
     난 왜 이렇게 못난 걸까
     어떡하면 나도 너처럼 환하게 웃어볼 수 있을까
     또 화가나 왜 늘 완벽하지 못해
@@ -854,7 +854,7 @@ const songs = [
     And nobody wants to love me
     Just like her I wanna be pretty I wanna be pretty
     Don’t lie to my face cuz I know I’m ugly
-    `
+    `,
   },
 
   {
@@ -864,7 +864,7 @@ const songs = [
     participants: [
       "이은상(보컬), 최재혁(기타), 석은록(키보드), 송인욱(베이스), 김형욱(드럼)",
     ],
-    lyrics:`
+    lyrics: `
     Here we stand
     Worlds apart, hearts broken in two, two, two
 
@@ -919,14 +919,14 @@ const songs = [
     True love won't desert you
 
     No, no
-    `
+    `,
   },
   {
-    artist: "Same Direction",
-    title: "Hoobastank",
+    artist: "Hoobastank",
+    title: "Same Direction",
     teamname: "은록도 록이다",
     participants: ["이은상(보컬), 최재혁(기타), 이지연(베이스), 김민지(드럼)"],
-    lyrics:`
+    lyrics: `
     whenever i step outside, somebody claims to see the light
     it seems to me that all of us have lost our patience.
     'cause everyone thinks they're right, and nobody thinks that there just might
@@ -949,7 +949,7 @@ const songs = [
     i'd like to think that i can go my own way and meet you in the end.
     
     but i'm not ever going to know..........
-    `
+    `,
   },
 
   {
@@ -959,7 +959,7 @@ const songs = [
     participants: [
       "이은상(보컬), 최재혁(기타), 김송현(키보드), 이지연(베이스), 김민지(드럼)",
     ],
-    lyrics:`
+    lyrics: `
     중2때까진 늘 첫째 줄에
     겨우 160이 됐을 무렵
     쓸만한 녀석들은 모두 다
@@ -994,7 +994,7 @@ const songs = [
     다른 누구를 생각했었어
     미안해 너의 손을 잡고 걸을 때에도
     떠올랐었어 그 사람이
-    `
+    `,
   },
 
   {
@@ -1004,7 +1004,7 @@ const songs = [
     participants: [
       "진소희(보컬), 최재혁(기타), 석은록(키보드), 이지연(베이스), 김민지(드럼)",
     ],
-    lyrics:`
+    lyrics: `
     난 내가 말야 스무살 쯤엔 요절할 천재일 줄만 알고
     어릴 땐 말야 모든게 다 간단하다 믿었지
     이제 나는 딸기향 해열제 같은
@@ -1040,7 +1040,7 @@ const songs = [
     어디로 사라졌을까? 어느 틈에
     작은 일에도 늘 행복했었던
     예전 그대로의 모습 다시 찾고만 싶어
-    `
+    `,
   },
 
   {
@@ -1050,7 +1050,7 @@ const songs = [
     participants: [
       "진소희(보컬), 최재혁(기타), 석은록(키보드), 이지연(베이스), 김민지(드럼)",
     ],
-    lyrics:`
+    lyrics: `
     저 멀리 기다리는
     이름 모를 고민들과
     언젠가 그리워질
@@ -1078,7 +1078,7 @@ const songs = [
     Highlight
     Highlight
     Highlight
-    Highlight`
+    Highlight`,
   },
 ];
 
@@ -1094,17 +1094,18 @@ const SECTION_META_DATA = [
     order: 1,
     component: <IntroSection />,
   },
-  {
-    id: "noti",
-    title: "지켜주세요",
-    order: 2,
-    component: <NotiSection />,
-  },
+
   {
     id: "location",
     title: "여기서 만나요",
-    order: 3,
+    order: 2,
     component: <LocationSection />,
+  },
+  {
+    id: "noti",
+    title: "지켜주세요",
+    order: 3,
+    component: <NotiSection />,
   },
 ];
 
@@ -1160,8 +1161,10 @@ export default function App() {
   return (
     <>
       <Header infos={SECTION_META_DATA} />
-      <MainSection />
-      <Schedule />
+      <MainSection imgUrl="https://images.95jjangjun.workers.dev/IMG_9499.webp" />
+      <MainSection imgUrl="https://images.95jjangjun.workers.dev/IMG_9498.webp" />
+
+      {/* <Schedule /> */}
       <IntroSection
         id="intro"
         infos={groupedSongs}
