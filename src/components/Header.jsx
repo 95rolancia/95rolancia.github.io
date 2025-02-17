@@ -21,7 +21,7 @@ export default function Header({ infos }) {
     }));
 
   return (
-    <header className="fixed top-0 w-screen max-w-[600px] bg-black text-white z-10">
+    <header className="fixed top-0 w-screen max-w-[465px] bg-black text-white z-10">
       <div className="flex justify-between items-center pl-5 pr-1 py-1">
         <a href="/" className="font-bold text-xl">
           2025 시간외
