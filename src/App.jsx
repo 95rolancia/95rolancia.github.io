@@ -4,11 +4,12 @@ import Header from "./components/Header";
 import IntroSection from "./components/IntroSection";
 import MainSection from "./components/MainSection";
 import NotiSection from "./components/NotiSection";
-import Schedule from "./components/Schedule";
 import ArrowUpBtn from "./components/ArrowUpBtn";
 import LocationSection from "./components/LocationSection";
 
 import { IoMdClose } from "react-icons/io";
+
+import { Analytics } from "@vercel/analytics/react";
 
 // const thumbnails = [
 //   {
@@ -1184,6 +1185,8 @@ export default function App() {
           onClose={() => setShowLyricsPopup(false)}
         />
       )}
+
+      <Analytics />
     </>
   );
 }
