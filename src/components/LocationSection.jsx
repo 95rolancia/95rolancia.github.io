@@ -5,7 +5,7 @@ export default function LocationSection({ id }) {
 
       <div className="m-4 flex justify-center">
         <img
-          src="https://images.95jjangjun.workers.dev/IMG_9477.jpeg"
+          src="https://images.95jjangjun.workers.dev/convent-pub-naver-map.webp"
           className="border-2 border-amber-100 rounded-md min-w-0 max-w-[400px]"
           onClick={() => {
             window.open("https://naver.me/xiquDF3a");
