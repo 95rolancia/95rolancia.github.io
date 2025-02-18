@@ -23,18 +23,22 @@ export default function MainSection({ imgUrl, withCountdown }) {
   }, []);
 
   return (
-    <div className="flex h-screen justify-center items-center relative">
-      <img
-        ref={imgRef}
-        src={imgUrl}
-        alt="overtime poster"
-        style={{ opacity }}
-      />
-      {withCountdown && (
-        <div className="w-full absolute top-2 left-1/2 transform -translate-x-1/2 text-white text-lg font-bold">
-          <CountDown />
-        </div>
-      )}
+    <div className="h-screen flex justify-center items-center">
+      <div class="relative">
+        <img
+          ref={imgRef}
+          src={imgUrl}
+          alt="overtime poster"
+          style={{ opacity }}
+          className="w-full h-auto"
+        />
+
+        {withCountdown && (
+          <div class="w-full absolute -top-16 left-1/2 transform -translate-x-1/2 p-2 text-white">
+            <CountDown />
+          </div>
+        )}
+      </div>
     </div>
   );
 }
