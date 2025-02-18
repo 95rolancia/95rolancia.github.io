@@ -154,6 +154,7 @@ const songs = [
     Yeah, yeah
     Yeah, yeah
     Yeah, yeah, yeah
+    
     I'm so lonely, that's okay, I shaved my head
     And I'm not sad
     And just maybe I'm to blame for all I've heard
@@ -168,14 +169,17 @@ const songs = [
     Yeah, yeah
     Yeah, yeah
     Yeah, yeah, yeah
+
     I like it, I'm not gonna crack
     I miss you, I'm not gonna crack
     I love you, I'm not gonna crack
     I killed you, I'm not gonna crack
+
     I like it, I'm not gonna crack
     I miss you, I'm not gonna crack
     I love you, I'm not gonna crack
     I killed you, I'm not gonna crack
+
     I'm so happy 'cause today I found my friends
     They're in my head
     I'm so ugly, that's okay, 'cause so are you
@@ -190,6 +194,7 @@ const songs = [
     Yeah, yeah
     Yeah, yeah
     Yeah, yeah, yeah
+
     I like it, I'm not gonna crack
     I miss you, I'm not gonna crack
     I love you, I'm not gonna crack
@@ -211,18 +216,21 @@ const songs = [
     Melodramatic fools
     Neurotic to the bone
     No doubt about it
+
     Sometimes I give myself the creeps
     Sometimes my mind plays tricks on me
     It all keeps adding up
     I think I'm cracking up
     Am I just paranoid?
     Or am I just stoned?
+    
     I went to a shrink
     To analyze my dreams
     She says it's lack of sex that's bringing me down
     I went to a whore
     He said my life's a bore
     So quit my whining 'cause it's bringing her down
+
     Sometimes I give myself the creeps
     Sometimes my mind plays tricks on me
     It all keeps adding up
@@ -230,15 +238,16 @@ const songs = [
     Am I just paranoid?
     Huh yeah, yeah, yeah
     (Ooh, ooh)
+
     Grasping to control
     So I better hold on
+
     Sometimes I give myself the creeps
     Sometimes my mind plays tricks on me
     It all keeps adding up
     I think I'm cracking up
     Am I just paranoid?
-    Or am I just stoned?
-    `,
+    Or am I just stoned?`,
   },
   {
     artist: "이적",
@@ -261,12 +270,14 @@ const songs = [
     무너진 가슴이 다시 일어설 수 있게
     난 어떡해야 할까요
     어떻게 해야만 할까요
+
     그대가 날 떠난 건지
     내가 그댈 떠난 건지
     일부러 기억을 흔들어 뒤섞어도
     금세 또 앙금이 가라앉듯
     다시금 선명해져요
     잠시라도 모두 잊을 수 있을까 했는데 음 음
+
     그게 참 맘처럼 쉽지가 않아서
     그게 참 말처럼 되지가 않아서
     무너진 가슴이 다시 일어설 수 있게
@@ -276,6 +287,7 @@ const songs = [
     그래서 아무것도 남김없이 비워내도록
     난 이를 앙다물고 버텨야 했죠
     하지만 여태 내 가슴속엔 후 예 예
+
     그게 참 말처럼 쉽게 되지가 않아서
     무너진 가슴이 다시 일어설 수 있게
     난 어떡해야 할까요
@@ -476,7 +488,7 @@ const songs = [
     title: "그대만 있다면",
     teamname: "시간외 파도타기",
     participants: [
-      "이희주(보컬), 서예찬&김세영(기타), 김은지(키보드), 원다연(키보드), 권혁민(베이스), 김형욱(드럼)",
+      "이희주(보컬), 서예찬&김세영(기타), 김은지&원다연(키보드), 권혁민(베이스), 김형욱(드럼)",
     ],
     lyrics: `
     날 사랑해서 떠난다며
@@ -609,74 +621,43 @@ const songs = [
       "조용걸(보컬), 이명근&이지은(기타), 윤혜정(키보드), 김남석(베이스), 김준호(드럼)",
     ],
     lyrics: `
-    멈춘 시간 속
-    잠든 너를 찾아가
-    아무리 막아도
-    결국 너의 곁인 걸
-    길고 긴 여행을 끝내
-    이젠 돌아가
-    너라는 집으로
-    지금 다시
-    Way back home
-    아무리 힘껏 닫아도
-    다시 열린 서랍 같아
-    하늘로 높이 날린 넌
-    자꾸 내게 되돌아와
-    힘들게 삼킨 이별도
-    다 그대로인 걸
-    Oh oh oh
-    수없이 떠난 길 위에서
-    난 너를 발견하고
-    비우려 했던 맘은 또
-    이렇게 너로 차올라
-    발걸음의 끝에
-    늘 니가 부딪혀
-    그만
-    그만
-    멈춘 시간 속
-    잠든 너를 찾아가
-    아무리 막아도
-    결국 너의 곁인 걸
-    길고 긴 여행을 끝내
-    이젠 돌아가
-    너라는 집으로
-    지금 다시
-    Way back home
-    조용히 잠든 방을 열어
-    기억을 꺼내 들어
-    부서진 시간 위에서
-    선명히 너는 떠올라
-    길 잃은 맘 속에
-    널 가둔 채 살아
-    그만
-    그만
-    멈춘 시간 속
-    잠든 너를 찾아가
-    아무리 막아도
-    결국 너의 곁인 걸
-    길고 긴 여행을 끝내
-    이젠 돌아가
-    너라는 집으로
-    지금 다시
-    Way back home
-    세상을 뒤집어
-    찾으려 해
-    오직 너로 완결된
-    이야기를
-    모든 걸 잃어도
-    난 너 하나면 돼
-    빛이 다 꺼진 여기
-    나를 안아줘
-    눈을 감으면
-    소리 없이 밀려와
-    이 마음 그 위로
-    넌 또 한 겹 쌓여가
-    내겐 그 누구도 아닌
-    니가 필요해
-    돌아와 내 곁에
-    그날까지
-    I'm not done
-    `,
+    멈춘 시간 속 잠든 너를 찾아가
+    아무리 막아도 결국 너의 곁인 걸
+    길고 긴 여행을 끝내 이젠 돌아가
+    너라는 집으로 지금 다시 Way back home
+
+    아무리 힘껏 닫아도 다시 열린 서랍 같아
+    하늘로 높이 날린 넌 자꾸 내게 되돌아와
+    힘들게 삼킨 이별도 다 그대로인 걸 Oh oh oh
+
+    수없이 떠난 길 위에서 난 너를 발견하고
+    비우려 했던 맘은 또 이렇게 너로 차올라
+    발걸음의 끝에 늘 니가 부딪혀 그만 그만
+
+    멈춘 시간 속 잠든 너를 찾아가
+    아무리 막아도 결국 너의 곁인 걸
+    길고 긴 여행을 끝내 이젠 돌아가
+    너라는 집으로 지금 다시 Way back home
+
+    조용히 잠든 방을 열어 기억을 꺼내 들어
+    부서진 시간 위에서 선명히 너는 떠올라
+    길 잃은 맘 속에 널 가둔 채 살아 그만 그만
+
+    멈춘 시간 속 잠든 너를 찾아가
+    아무리 막아도 결국 너의 곁인 걸
+    길고 긴 여행을 끝내 이젠 돌아가
+    너라는 집으로 지금 다시 Way back home
+
+    세상을 뒤집어 찾으려 해
+    오직 너로 완결된 이야기를
+    모든 걸 잃어도 난 너 하나면 돼
+
+    빛이 다 꺼진 여기 나를 안아줘
+
+    눈을 감으면 소리 없이 밀려와
+    이 마음 그 위로 넌 또 한 겹 쌓여가
+    내겐 그 누구도 아닌 니가 필요해
+    돌아와 내 곁에 그날까지 I'm not done`,
   },
 
   {
