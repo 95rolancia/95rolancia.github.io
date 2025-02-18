@@ -377,7 +377,7 @@ const songs = [
     title: "Creep",
     teamname: "운영본부",
     participants: [
-      "이은상(보컬), 서예찬&김세영(기타), 원다연(키보드), 허은재(베이스)",
+      "이은상(보컬), 서예찬&김세영(기타), 원다연(키보드), 허은재(베이스), 김준호(드럼)",
     ],
     lyrics: `
     When you were here before
