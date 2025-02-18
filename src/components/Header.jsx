@@ -22,11 +22,20 @@ export default function Header({ infos }) {
 
   return (
     <header className="fixed top-0 w-screen max-w-[465px] bg-black text-white z-10">
-      <div className="flex justify-between items-center pl-5 pr-1 py-1">
+      <div className="flex justify-between items-center pl-5 py-1">
         <a href="/" className="font-bold text-xl">
           2025 시간외
         </a>
-        <Hamburger toggled={isOpen} toggle={setOpen} size={20} />
+
+        <div className="flex items-center">
+          <button
+            className="border-1 p-1 text-sm font-bold"
+            onClick={() => window.open("https://forms.gle/oVAfeywjkw2cKWWp9")}
+          >
+            티켓 예매
+          </button>
+          <Hamburger toggled={isOpen} toggle={setOpen} size={20} />
+        </div>
       </div>
 
       <nav
