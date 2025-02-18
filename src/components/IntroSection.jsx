@@ -1,6 +1,15 @@
 import { useState, useRef, useEffect } from "react";
 import arrow from "../assets/arrow.svg";
 
+const thumbnails = {
+  운영본부: "https://images.95jjangjun.workers.dev/IMG_9581.webp",
+  // 비상장밴드: "https://images.95jjangjun.workers.dev/IMG_9581.webp",
+  "은록도 록이다": "https://images.95jjangjun.workers.dev/IMG_9582.webp",
+  // uniT: "https://images.95jjangjun.workers.dev/IMG_9581.webp",
+  "시간외 파도타기": "https://images.95jjangjun.workers.dev/IMG_9583.webp",
+  // 시간외안가: "https://images.95jjangjun.workers.dev/IMG_9583.webp",
+};
+
 export default function IntroSection({ id, infos, openLyricsPopup }) {
   const [isFilterOpen, setIsFilterOpen] = useState(false);
   const [activeTitle, setActiveTitle] = useState("");
@@ -98,12 +107,25 @@ function SessionSection({ sessionId, songs, sectionsRef, openLyricsPopup }) {
       ref={(el) => sectionsRef.current.set(sessionId, el)}
       data-title={sessionId}
     >
-      <div className="bg-amber-600 flex justify-center items-center">
-        <div className="m-10 rounded-xl bg-gray-300 w-[200px] h-[200px] flex items-center justify-center text-gray-700 font-bold text-3xl">
-          {sessionId}
-          <br /> 썸네일
+      {/* {sessionId} */}
+
+      {thumbnails[sessionId] ? (
+        <div class="h-60 w-full bg-gray-200">
+          <img
+            src={thumbnails[sessionId]}
+            className="h-full w-full object-cover"
+          />
         </div>
-      </div>
+      ) : (
+        <div className="bg-amber-600 flex justify-center items-center">
+          <div className="m-10 rounded-xl bg-gray-300 w-[200px] h-[200px] flex items-center justify-center text-gray-700 font-bold text-3xl">
+            {sessionId}
+            <br /> 썸네일
+          </div>
+        </div>
+      )}
+
+      {/* <br /> 썸네일 */}
       <SongList songs={songs} openLyricsPopup={openLyricsPopup} />
     </div>
   );
