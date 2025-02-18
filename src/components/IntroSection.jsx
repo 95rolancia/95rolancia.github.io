@@ -110,7 +110,7 @@ function SessionSection({ sessionId, songs, sectionsRef, openLyricsPopup }) {
       {/* {sessionId} */}
 
       {thumbnails[sessionId] ? (
-        <div class="h-60 w-full bg-gray-200">
+        <div className="h-60 w-full bg-gray-200">
           <img
             src={thumbnails[sessionId]}
             className="h-full w-full object-cover"
