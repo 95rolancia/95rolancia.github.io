@@ -11,33 +11,6 @@ import { IoMdClose } from "react-icons/io";
 
 import { Analytics } from "@vercel/analytics/react";
 
-// const thumbnails = [
-//   {
-//     teamname: '은록도 록이다',
-//     thumbnail: 'https://images.95jjangjun.workers.dev/IMG_9470.jpeg'
-//   },
-//   {
-//     teamname: '은록도 록이다',
-//     thumbnail: 'https://images.95jjangjun.workers.dev/IMG_9470.jpeg'
-//   },
-//   {
-//     teamname: '은록도 록이다',
-//     thumbnail: 'https://images.95jjangjun.workers.dev/IMG_9470.jpeg'
-//   },
-//   {
-//     teamname: '은록도 록이다',
-//     thumbnail: 'https://images.95jjangjun.workers.dev/IMG_9470.jpeg'
-//   },
-//   {
-//     teamname: '은록도 록이다',
-//     thumbnail: 'https://images.95jjangjun.workers.dev/IMG_9470.jpeg'
-//   },
-//   {
-//     teamname: '은록도 록이다',
-//     thumbnail: 'https://images.95jjangjun.workers.dev/IMG_9470.jpeg'
-//   },
-// ]
-
 const songs = [
   {
     artist: "Sixpence None The Richer",
@@ -1143,7 +1116,10 @@ export default function App() {
   return (
     <>
       <Header infos={SECTION_META_DATA} />
-      <MainSection imgUrl="https://images.95jjangjun.workers.dev/IMG_9499.webp" />
+      <MainSection
+        imgUrl="https://images.95jjangjun.workers.dev/IMG_9499.webp"
+        withCountdown
+      />
       <MainSection imgUrl="https://images.95jjangjun.workers.dev/IMG_9498.webp" />
 
       {/* <Schedule /> */}
