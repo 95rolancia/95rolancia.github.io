@@ -1,7 +1,8 @@
 import { useState, useRef, useEffect } from "react";
 import poster from "../assets/poster.jpeg";
+import CountDown from "./CountDown";
 
-export default function MainSection({imgUrl}) {
+export default function MainSection({ imgUrl }) {
   const imgRef = useRef(null);
   const [opacity, setOpacity] = useState(1);
 
@@ -23,13 +24,14 @@ export default function MainSection({imgUrl}) {
   }, []);
 
   return (
-      <div className="flex h-screen justify-center items-center">
-        <img
-          ref={imgRef}
-          src={imgUrl}
-          alt="overtime poster"
-          style={{ opacity }}
-        />
-      </div>
+    <div className="flex h-screen justify-center items-center">
+      <CountDown />
+      <img
+        ref={imgRef}
+        src={imgUrl}
+        alt="overtime poster"
+        style={{ opacity }}
+      />
+    </div>
   );
 }
