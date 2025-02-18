@@ -1,8 +1,7 @@
 import { useState, useRef, useEffect } from "react";
-import poster from "../assets/poster.jpeg";
 import CountDown from "./CountDown";
 
-export default function MainSection({ imgUrl }) {
+export default function MainSection({ imgUrl, withCountdown }) {
   const imgRef = useRef(null);
   const [opacity, setOpacity] = useState(1);
 
@@ -24,14 +23,18 @@ export default function MainSection({ imgUrl }) {
   }, []);
 
   return (
-    <div className="flex h-screen justify-center items-center">
-      <CountDown />
+    <div className="flex h-screen justify-center items-center relative">
       <img
         ref={imgRef}
         src={imgUrl}
         alt="overtime poster"
         style={{ opacity }}
       />
+      {withCountdown && (
+        <div className="w-full absolute top-2 left-1/2 transform -translate-x-1/2 text-white text-lg font-bold">
+          <CountDown />
+        </div>
+      )}
     </div>
   );
 }
