@@ -33,8 +33,8 @@ export default function MainSection({ imgUrl, withCountdown }) {
           className="w-full h-auto"
         />
 
-        {withCountdown && (
-          <div class="w-full absolute -top-16 left-1/2 transform -translate-x-1/2 p-2 text-white">
+        {withCountdown && imgRef.current && (
+          <div className="w-full absolute -top-16 left-1/2 transform -translate-x-1/2 p-2 text-white">
             <CountDown />
           </div>
         )}
