@@ -26,6 +26,12 @@ export default function MainSection({ imgUrl, withCountdown }) {
   return (
     <div className="h-screen flex justify-center items-center">
       <div class="relative">
+        {!isImgLoaded && (
+          <div className="absolute inset-0 flex items-center justify-center">
+            Loading...
+          </div>
+        )}
+
         <img
           ref={imgRef}
           src={imgUrl}
