@@ -4,6 +4,7 @@ import CountDown from "./CountDown";
 export default function MainSection({ imgUrl, withCountdown }) {
   const imgRef = useRef(null);
   const [opacity, setOpacity] = useState(1);
+  const [isImgLoaded, setIsImgLoaded] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -31,9 +32,10 @@ export default function MainSection({ imgUrl, withCountdown }) {
           alt="overtime poster"
           style={{ opacity }}
           className="w-full h-auto"
+          onLoad={() => setIsImgLoaded(true)}
         />
 
-        {withCountdown && imgRef.current && (
+        {withCountdown && isImgLoaded && (
           <div className="w-full absolute -top-16 left-1/2 transform -translate-x-1/2 p-2 text-white">
             <CountDown />
           </div>
