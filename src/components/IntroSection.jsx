@@ -3,10 +3,10 @@ import arrow from "../assets/arrow.svg";
 
 const thumbnails = {
   운영본부: "https://images.95jjangjun.workers.dev/IMG_9581.webp",
-  // 비상장밴드: "https://images.95jjangjun.workers.dev/IMG_9581.webp",
+  비상장밴드: "https://images.95jjangjun.workers.dev/IMG_9593.webp",
   "은록도 록이다": "https://images.95jjangjun.workers.dev/IMG_9582.webp",
-  // uniT: "https://images.95jjangjun.workers.dev/IMG_9581.webp",
-  "시간외 파도타기": "https://images.95jjangjun.workers.dev/IMG_9583.webp",
+  uniT: "https://images.95jjangjun.workers.dev/IMG_9591.webp",
+  "시간외 파도타기": "https://images.95jjangjun.workers.dev/IMG_9592.webp",
   // 시간외안가: "https://images.95jjangjun.workers.dev/IMG_9583.webp",
 };
 
@@ -110,18 +110,15 @@ function SessionSection({ sessionId, songs, sectionsRef, openLyricsPopup }) {
       {/* {sessionId} */}
 
       {thumbnails[sessionId] ? (
-        <div className="h-60 w-full bg-gray-200">
+        <div className="h-60 w-full bg-inherit">
           <img
             src={thumbnails[sessionId]}
             className="h-full w-full object-cover"
           />
         </div>
       ) : (
-        <div className="bg-amber-600 flex justify-center items-center">
-          <div className="m-10 rounded-xl bg-gray-300 w-[200px] h-[200px] flex items-center justify-center text-gray-700 font-bold text-3xl">
-            {sessionId}
-            <br /> 썸네일
-          </div>
+        <div className="h-60 w-full bg-inherit">
+          <div className="flex justify-center items-center h-full font-bold text-4xl">{sessionId}</div>
         </div>
       )}
 
