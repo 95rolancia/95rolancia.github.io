@@ -1070,6 +1070,7 @@ export default function App() {
   const [showLyricsPopup, setShowLyricsPopup] = useState(false);
   const [lyrics, setLyrics] = useState("");
   const [isLoaded, setIsLoaded] = useState(false);
+  const [isDone, setIsDone] = useState(false);
 
   const groupedSongs = useMemo(
     () =>
@@ -1124,9 +1125,13 @@ export default function App() {
     }
   }, [isLoaded]);
 
+  useEffect(() => {
+    setTimeout(() => setIsDone(true), 1500);
+  });
+
   return (
     <>
-      {!isLoaded && <LoadingScreen />}
+      {(!isLoaded || !isDone) && <LoadingScreen />}
       <Header infos={SECTION_META_DATA} />
       <MainSection
         imgUrl="https://images.95jjangjun.workers.dev/IMG_9499.webp"

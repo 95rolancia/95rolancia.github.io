@@ -12,6 +12,7 @@ export default function LoadingScreen() {
           src="https://images.95jjangjun.workers.dev/Logo.webp"
           alt="Logo"
           className="w-full h-full object-cover rounded-full"
+          loading="eager"
         />
       </div>
     </div>
