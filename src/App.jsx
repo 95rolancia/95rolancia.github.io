@@ -1040,8 +1040,29 @@ const songs = [
 ];
 
 const NOTI_INFOS = {
-  title: "지켜주세요",
-  notis: ["안전에 유의해주세요", "뚜껑이 있는 음료만 반입이 가능합니다."],
+  title: "확인해주세요",
+  notis: [
+    {
+      title: "케이뱅크 시간외밴드 첫 공연입니다!",
+      desc: "시간외 밴드 첫 공연, 부족하겠지만 많은 격려와 응원 부탁드립니다.",
+    },
+    {
+      title: "외부 음식 및 음료 금지",
+      desc: "외부 음식 및 음료는 반입 금지입니다.",
+    },
+    {
+      title: "휴대폰 설정",
+      desc: "휴대폰은 무음 모드 설정 부탁드립니다.",
+    },
+    {
+      title: "공연중에는 이동을 삼가주세요.",
+      desc: "공연 중에는 이동없이 자리를 지켜주세요.",
+    },
+    {
+      title: "촬영 가이드",
+      desc: "휴대전화 촬영은 환영입니다😊(단, 다른분들 관람에 방해가 되지 않는 선에서!)",
+    },
+  ],
 };
 
 const SECTION_META_DATA = [
@@ -1060,7 +1081,7 @@ const SECTION_META_DATA = [
   },
   {
     id: "noti",
-    title: "지켜주세요",
+    title: "확인해주세요",
     order: 3,
     component: <NotiSection />,
   },
@@ -1119,7 +1140,7 @@ export default function App() {
 
   useEffect(() => {
     if (isLoaded) {
-      document.body.style.overflow = "auto";
+      document.body.style.overflow = "visible";
     } else {
       document.body.style.overflow = "hidden";
     }
