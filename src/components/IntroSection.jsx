@@ -7,7 +7,7 @@ const thumbnails = {
   "은록도 록이다": "https://images.95jjangjun.workers.dev/IMG_9582.webp",
   uniT: "https://images.95jjangjun.workers.dev/IMG_9591.webp",
   "시간외 파도타기": "https://images.95jjangjun.workers.dev/IMG_9592.webp",
-  // 시간외안가: "https://images.95jjangjun.workers.dev/IMG_9583.webp",
+  시간외안가: "https://images.95jjangjun.workers.dev/IMG_9595.webp",
 };
 
 export default function IntroSection({ id, infos, openLyricsPopup }) {
@@ -122,7 +122,6 @@ function SessionSection({ sessionId, songs, sectionsRef, openLyricsPopup }) {
         </div>
       )}
 
-      {/* <br /> 썸네일 */}
       <SongList songs={songs} openLyricsPopup={openLyricsPopup} />
     </div>
   );
