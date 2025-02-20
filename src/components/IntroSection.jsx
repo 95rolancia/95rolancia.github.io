@@ -48,7 +48,7 @@ export default function IntroSection({ id, infos, openLyricsPopup }) {
 
   return (
     <section id={id} className="text-center w-full mt-10 pt-20">
-      <h2 className="font-bold text-4xl mb-10">세션 소개</h2>
+      <h2 className="font-bold text-4xl mb-10">SET LIST</h2>
 
       <div className="border-t-gray-800 border-t-2 bg-black sticky top-[55px]">
         <div

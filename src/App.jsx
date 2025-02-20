@@ -1040,10 +1040,10 @@ const songs = [
 ];
 
 const NOTI_INFOS = {
-  title: "확인해주세요",
+  title: "INFO",
   notis: [
     {
-      title: "케이뱅크 시간외밴드 첫 공연입니다!",
+      title: "케이뱅크 시간외 밴드 첫 공연입니다!",
       desc: "시간외 밴드 첫 공연, 부족하겠지만 많은 격려와 응원 부탁드립니다.",
     },
     {
@@ -1055,12 +1055,12 @@ const NOTI_INFOS = {
       desc: "휴대전화는 무음 설정 부탁드립니다.",
     },
     {
-      title: "공연 중에는 이동을 삼가세요.",
+      title: "공연 중 이동 지양",
       desc: "공연 중에는 이동 없이 자리를 지켜주세요.",
     },
     {
-      title: "촬영 가이드",
-      desc: "휴대전화 촬영은 환영입니다😊(단, 다른 분들 관람에 방해가 되지 않는 선에서!)",
+      title: "촬영 안내",
+      desc: "휴대전화 촬영은 환영입니다😊\n\n(단, 다른 분들 관람에 방해가 되지 않는 선에서!)",
     },
   ],
 };
@@ -1068,20 +1068,20 @@ const NOTI_INFOS = {
 const SECTION_META_DATA = [
   {
     id: "intro",
-    title: "세션 소개",
+    title: "SET LIST",
     order: 1,
     component: <IntroSection />,
   },
 
   {
     id: "location",
-    title: "여기서 만나요",
+    title: "LOCATION",
     order: 2,
     component: <LocationSection />,
   },
   {
     id: "noti",
-    title: "확인해주세요",
+    title: "INFO",
     order: 3,
     component: <NotiSection />,
   },

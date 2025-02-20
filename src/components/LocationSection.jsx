@@ -1,7 +1,7 @@
 export default function LocationSection({ id }) {
   return (
     <section id={id} className="h-screen text-center pt-20">
-      <h2 className="font-bold text-4xl pb-6">여기서 만나요</h2>
+      <h2 className="font-bold text-4xl pb-6">LOCATION</h2>
 
       <div className="m-4 flex justify-center">
         <img

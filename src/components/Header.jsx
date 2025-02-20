@@ -24,7 +24,7 @@ export default function Header({ infos }) {
     <header className="fixed top-0 w-screen max-w-[465px] bg-black text-white z-10">
       <div className="flex justify-between items-center pl-5 py-1">
         <a href="/" className="font-bold text-xl">
-          2025 시간외
+          시간외:시작
         </a>
 
         <div className="flex items-center">

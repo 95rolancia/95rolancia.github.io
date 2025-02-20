@@ -1,7 +1,7 @@
 export default function NotiSection({ id, title, notis }) {
   return (
     <section id={id} className="text-center w-full h-screen pt-20 px-4">
-      <h2 className="font-bold text-4xl mb-8">{title}</h2>
+      <h2 className="font-bold text-4xl mb-8">INFO</h2>
 
       <ul className="pl-6 text-left">
         {notis.map((noti, idx) => (
