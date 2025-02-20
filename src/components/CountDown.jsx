@@ -35,13 +35,13 @@ const CountDown = () => {
     <div className="countdown-container absolute top-13 bg-transparent">
       <div className="countdown-timer">
         <CountdownItem value={timeLeft.days} />
-        <div className="text-2xl mr-3 -mx-[1px] text-gray-300">D</div>
+        <div className="text-2xl mr-3 -mx-[1px] text-gray-200">D</div>
         <CountdownItem value={timeLeft.hours} />
-        <div className="text-2xl mr-3 -mx-[1px] text-gray-300">H</div>
+        <div className="text-2xl mr-3 -mx-[1px] text-gray-200">H</div>
         <CountdownItem value={timeLeft.minutes} />
-        <div className="text-2xl mr-3 -mx-[1px] text-gray-300">M</div>
+        <div className="text-2xl mr-3 -mx-[1px] text-gray-200">M</div>
         <CountdownItem value={timeLeft.seconds} />
-        <div className="text-2xl mr-3 -mx-[1px] text-gray-300">S</div>
+        <div className="text-2xl mr-3 -mx-[1px] text-gray-200">S</div>
       </div>
     </div>
   );
@@ -49,7 +49,7 @@ const CountDown = () => {
 
 const CountdownItem = ({ value, label }) => {
   return (
-    <div className="countdown-item text-2xl">
+    <div className="countdown-item text-2xl text-[#ff3131]">
       {value.split("").map((digit, index) => (
         <RollingNumber key={index} digit={digit} />
       ))}
