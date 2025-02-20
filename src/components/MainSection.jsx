@@ -23,7 +23,7 @@ export default function MainSection({ imgUrl, withCountdown, setIsLoaded }) {
   }, []);
 
   return (
-    <div className="h-screen flex justify-center items-center">
+    <div className="h-screen w-full flex justify-center items-center">
       <div class="relative">
         <img
           ref={imgRef}
@@ -36,7 +36,7 @@ export default function MainSection({ imgUrl, withCountdown, setIsLoaded }) {
           }}
         />
         {withCountdown && (
-          <div className="w-full absolute -top-16 left-1/2 transform -translate-x-1/2 p-2 text-white">
+          <div className="w-full absolute -top-16 left-1/2 transform -translate-x-1/2 text-white">
             <CountDown />
           </div>
         )}
