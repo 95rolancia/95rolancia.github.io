@@ -1118,7 +1118,7 @@ export default function App() {
 
   useEffect(() => {
     if (isLoaded) {
-      document.body.style.overflow = "hidden";
+      document.body.style.overflow = "auto";
     } else {
       document.body.style.overflow = "hidden";
     }
@@ -1126,7 +1126,7 @@ export default function App() {
 
   return (
     <>
-      {isLoaded && <LoadingScreen />}
+      {!isLoaded && <LoadingScreen />}
       <Header infos={SECTION_META_DATA} />
       <MainSection
         imgUrl="https://images.95jjangjun.workers.dev/IMG_9499.webp"
