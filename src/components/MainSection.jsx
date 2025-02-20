@@ -1,10 +1,9 @@
 import { useState, useRef, useEffect } from "react";
 import CountDown from "./CountDown";
 
-export default function MainSection({ imgUrl, withCountdown }) {
+export default function MainSection({ imgUrl, withCountdown, setIsLoaded }) {
   const imgRef = useRef(null);
   const [opacity, setOpacity] = useState(1);
-  const [isImgLoaded, setIsImgLoaded] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -26,22 +25,17 @@ export default function MainSection({ imgUrl, withCountdown }) {
   return (
     <div className="h-screen flex justify-center items-center">
       <div class="relative">
-        {!isImgLoaded && (
-          <div className="absolute inset-0 flex items-center justify-center">
-            Loading...
-          </div>
-        )}
-
         <img
           ref={imgRef}
           src={imgUrl}
           alt="overtime poster"
           style={{ opacity }}
           className="w-full h-auto"
-          onLoad={() => setIsImgLoaded(true)}
+          onLoad={() => {
+            setIsLoaded && setIsLoaded(true);
+          }}
         />
-
-        {withCountdown && isImgLoaded && (
+        {withCountdown && (
           <div className="w-full absolute -top-16 left-1/2 transform -translate-x-1/2 p-2 text-white">
             <CountDown />
           </div>

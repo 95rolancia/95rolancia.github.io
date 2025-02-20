@@ -10,6 +10,7 @@ import LocationSection from "./components/LocationSection";
 import { IoMdClose } from "react-icons/io";
 
 import { Analytics } from "@vercel/analytics/react";
+import LoadingScreen from "./components/LoadingScreen";
 
 const songs = [
   {
@@ -362,7 +363,7 @@ const songs = [
     title: "Creep",
     teamname: "운영본부",
     participants: [
-      "이은상(보컬), 서예찬&김세영(기타), 원다연(키보드), 허은재(베이스), 김준호(드럼)",
+      "이은상(보컬), 서예찬&김세영(기타), 허은재(베이스), 김준호(드럼)",
     ],
     lyrics: `
     When you were here before
@@ -407,6 +408,40 @@ const songs = [
 
     I don't belong here
     I don't belong here
+    `,
+  },
+
+  {
+    artist: "서영은",
+    title: "혼자가 아닌 나",
+    teamname: "시간외 파도타기",
+    participants: [
+      "이희주(보컬), 원성호&김세영(기타), 원다연(키보드), 권혁민(베이스), 이규민(드럼)",
+    ],
+    lyrics: `
+    이제 다시 울지 않겠어 더는 슬퍼하지 않아
+    다신 외로움에 슬픔에 난 흔들리지 않겠어
+    더는 약해지지 않을께 많이 아파도 웃을꺼야
+    그런 내가 더 슬퍼보여도 날 위로 하지마
+    
+    가끔 나 욕심이 많아서 울어야 했는지 몰라
+    행복은 늘 멀리 있을때 커 보이는 걸
+    
+    힘이 들땐 하늘을 봐 나는 항상 혼자가 아니야
+    비가 와도 모진 바람 불어도 다시 햇살은 비추니까
+    눈물나게 아픈날엔 크게 한번만 소리를 질러봐
+    내게 오려던 연약한 슬픔이 또 달아날 수 있게
+    
+    가끔 어제가 후회되도
+    나 지금 사는 오늘이 내일보면 어제가 되는 하루 일테니
+    
+    힘이 들땐 하늘을 봐 나는 항상 혼자가 아니야
+    비가 와도 모진 바람 불어도 다시 햇살은 비추니까
+    눈물나게 아픈날엔 크게 한번만 소리를 질러봐
+    내게 오려던 연약한 슬픔이 또 달아날 수 있게
+    
+    앞만 보고 걸어갈께 때론 혼자서 뛰어라도 갈께.
+    내게 멈추던 조그만 슬픔도 날 따라오지 않게
     `,
   },
   {
@@ -552,39 +587,6 @@ const songs = [
     `,
   },
 
-  {
-    artist: "서영은",
-    title: "혼자가 아닌 나",
-    teamname: "시간외 파도타기",
-    participants: [
-      "이희주(보컬), 원성호&김세영(기타), 원다연(키보드), 권혁민(베이스), 이규민(드럼)",
-    ],
-    lyrics: `
-    이제 다시 울지 않겠어 더는 슬퍼하지 않아
-    다신 외로움에 슬픔에 난 흔들리지 않겠어
-    더는 약해지지 않을께 많이 아파도 웃을꺼야
-    그런 내가 더 슬퍼보여도 날 위로 하지마
-    
-    가끔 나 욕심이 많아서 울어야 했는지 몰라
-    행복은 늘 멀리 있을때 커 보이는 걸
-    
-    힘이 들땐 하늘을 봐 나는 항상 혼자가 아니야
-    비가 와도 모진 바람 불어도 다시 햇살은 비추니까
-    눈물나게 아픈날엔 크게 한번만 소리를 질러봐
-    내게 오려던 연약한 슬픔이 또 달아날 수 있게
-    
-    가끔 어제가 후회되도
-    나 지금 사는 오늘이 내일보면 어제가 되는 하루 일테니
-    
-    힘이 들땐 하늘을 봐 나는 항상 혼자가 아니야
-    비가 와도 모진 바람 불어도 다시 햇살은 비추니까
-    눈물나게 아픈날엔 크게 한번만 소리를 질러봐
-    내게 오려던 연약한 슬픔이 또 달아날 수 있게
-    
-    앞만 보고 걸어갈께 때론 혼자서 뛰어라도 갈께.
-    내게 멈추던 조그만 슬픔도 날 따라오지 않게
-    `,
-  },
   // 2부
   {
     artist: "숀",
@@ -1067,6 +1069,7 @@ const SECTION_META_DATA = [
 export default function App() {
   const [showLyricsPopup, setShowLyricsPopup] = useState(false);
   const [lyrics, setLyrics] = useState("");
+  const [isLoaded, setIsLoaded] = useState(false);
 
   const groupedSongs = useMemo(
     () =>
@@ -1113,12 +1116,22 @@ export default function App() {
     };
   }, []);
 
+  useEffect(() => {
+    if (isLoaded) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "hidden";
+    }
+  }, [isLoaded]);
+
   return (
     <>
+      {isLoaded && <LoadingScreen />}
       <Header infos={SECTION_META_DATA} />
       <MainSection
         imgUrl="https://images.95jjangjun.workers.dev/IMG_9499.webp"
         withCountdown
+        setIsLoaded={setIsLoaded}
       />
       <MainSection imgUrl="https://images.95jjangjun.workers.dev/IMG_9498.webp" />
 
