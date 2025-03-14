@@ -1,6 +1,11 @@
 import { useEffect, useState } from "react";
 import "./Countdown.css";
 
+function isDday({ days, hours, minutes, seconds }) {
+  if (Number(days) < 0 && Number(hours) < 0 && Number(minutes < 0) && Number(seconds) < 0) return true;
+  return false;
+}
+
 const CountDown = () => {
   const targetDate = new Date("2025-03-15T18:00:00");
   const [timeLeft, setTimeLeft] = useState(formatTime(getTimeRemaining()));
@@ -30,6 +35,18 @@ const CountDown = () => {
 
     return () => clearInterval(timer);
   }, []);
+
+  if (isDday(timeLeft)) {
+    return (
+      <div className="countdown-container absolute top-13 bg-transparent">
+        <div className="text-xl countdown-timer rounded-3xl px-2 py-0.5 bg-red-500 font-bold shadow-lg text-white" style={{
+          animation: "float 2s ease-in-out infinite",
+        }}>
+          LIVE
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="countdown-container absolute top-13 bg-transparent">
