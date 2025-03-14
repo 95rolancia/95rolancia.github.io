@@ -24,7 +24,7 @@ export default function MainSection({ imgUrl, withCountdown, setIsLoaded }) {
 
   return (
     <div className="h-screen w-full flex justify-center items-center">
-      <div class="relative">
+      <div className="relative">
         <img
           ref={imgRef}
           src={imgUrl}
